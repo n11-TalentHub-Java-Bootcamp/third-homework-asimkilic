@@ -1,9 +1,11 @@
 package com.asimkilic.mongodbhw3.dto.update;
 
 
+import javax.validation.constraints.Size;
+
 public class ProductCommentUpdateDto {
     private String id;
-
+    @Size(max=500)
     private String comment;
 
     private String productId;

@@ -1,15 +1,22 @@
 package com.asimkilic.mongodbhw3.dto.create;
 
+import javax.validation.constraints.Size;
+
 public class UserCreateDto {
 
+    @Size(max = 50)
     private String firstName;
 
+    @Size(max = 50)
     private String lastName;
 
+    @Size(max = 50)
     private String email;
 
+    @Size(max = 15)
     private String phone;
 
+    @Size(max = 20)
     private String username;
 
     public UserCreateDto() {

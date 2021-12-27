@@ -1,9 +1,10 @@
 package com.asimkilic.mongodbhw3.dto.create;
 
 
+import javax.validation.constraints.Size;
 
 public class ProductCommentCreateDto {
-
+    @Size(max=500)
     private String comment;
 
     private String productId;
