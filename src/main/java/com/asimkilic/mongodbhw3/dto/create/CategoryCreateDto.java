@@ -1,26 +1,17 @@
-package com.asimkilic.mongodbhw3.entity;
+package com.asimkilic.mongodbhw3.dto.create;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection="CategoryCreateDto")
-public class Category {
-
-    @Id
-    private String id;
-
+public class CategoryCreateDto {
     private String name;
-
     private Long level;
-
     private String superCategoryId;
 
-    public String getId() {
-        return id;
+    public CategoryCreateDto() {
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public CategoryCreateDto(String categoryName, Long level, String superCategoryId) {
+        this.name = categoryName;
+        this.level = level;
+        this.superCategoryId = superCategoryId;
     }
 
     public String getName() {

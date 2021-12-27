@@ -16,8 +16,7 @@ public class UserEntityService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private ProductCommentService productCommentService;
+
 
     public List<User> findAll() {
         return userRepository.findAll();

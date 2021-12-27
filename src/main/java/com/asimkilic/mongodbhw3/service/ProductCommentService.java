@@ -1,17 +1,19 @@
 package com.asimkilic.mongodbhw3.service;
 
+import com.asimkilic.mongodbhw3.dto.create.ProductCommentCreateDto;
+import com.asimkilic.mongodbhw3.dto.read.ProductCommentReadDto;
 import com.asimkilic.mongodbhw3.entity.ProductComment;
 
 import java.util.List;
 
 public interface ProductCommentService {
 
-    List<ProductComment> findAll();
-    ProductComment findById(String id);
+    List<ProductCommentReadDto> findAll();
+    ProductCommentReadDto findById(String id);
 
-    ProductComment save(ProductComment productComment);
+    ProductCommentReadDto save(ProductCommentCreateDto productCommentCreateDto);
 
     void deleteAllByUserId(String userId);
     void deleteById(String id);
-    void delete(ProductComment productComment);
+    void delete(ProductCommentReadDto productCommentReadDto);
 }

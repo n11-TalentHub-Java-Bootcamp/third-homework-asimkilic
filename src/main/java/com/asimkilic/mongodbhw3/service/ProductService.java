@@ -1,18 +1,20 @@
 package com.asimkilic.mongodbhw3.service;
 
 import com.asimkilic.mongodbhw3.dto.ProductDetailDto;
+import com.asimkilic.mongodbhw3.dto.create.ProductCreateDto;
+import com.asimkilic.mongodbhw3.dto.read.ProductReadDto;
 import com.asimkilic.mongodbhw3.entity.Product;
 
 import java.util.List;
 
 public interface ProductService {
-    List<Product> findAll();
+    List<ProductReadDto> findAll();
 
-    Product findById(String id);
+    ProductReadDto findById(String id);
 
     ProductDetailDto findProductDetailDtoById(String id);
 
-    Product save(Product product);
+    ProductReadDto save(ProductCreateDto productCreateDto);
 
     void deleteById(String id);
 

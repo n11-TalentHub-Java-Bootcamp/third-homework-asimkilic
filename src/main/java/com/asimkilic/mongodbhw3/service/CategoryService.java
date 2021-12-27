@@ -1,18 +1,21 @@
 package com.asimkilic.mongodbhw3.service;
 
+import com.asimkilic.mongodbhw3.dto.create.CategoryCreateDto;
+import com.asimkilic.mongodbhw3.dto.read.CategoryReadDto;
 import com.asimkilic.mongodbhw3.entity.Category;
 
 import java.util.List;
 
 public interface CategoryService {
 
-    Category save(Category category);
+    CategoryReadDto save(CategoryCreateDto categoryCreateDto);
 
     void delete(String id);
 
+    List<CategoryReadDto> findAll();
 
-    List<Category> findAll();
+    CategoryReadDto findById(String id);
 
-    Category findById(String id);
+
 
 }
